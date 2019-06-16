@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\zzz\_02springmvcjavaconfig"/>
+			<item value="C:\Users\HJT\Desktop\shiro-master"/>
+			<item value="C:\Users\HJT\Desktop\maven_shiro-master"/>
+			<item value="C:\Users\HJT\Desktop\SSM_Shiro-master"/>
+			<item value="E:\zzz\shiro-spring"/>
+			<item value="E:\sshfuben\shiro-spring"/>
+			<item value="C:\shiro-spring1"/>
+			<item value="C:\shiro-spring"/>
+			<item value="E:\sshfuben\shiro-spring\shiro-spring"/>
+			<item value="E:\tomcat\shiro-spring"/>
+			<item value="C:\Users\HJT\Desktop\框架学习资料\shiro\shiro-spring"/>
+			<item value="C:\Users\HJT\Desktop\_02springmvcjavaconfig"/>
+			<item value="C:\Users\HJT\Desktop\Demo-SpringMVC-master"/>
+			<item value="C:\Users\HJT\Desktop\springmvc\springboot1\Springboot（一）资料与代码\_02webjavaconfig"/>
+			<item value="C:\Users\HJT\Desktop\WebProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="E:\STSworlspace\validate"/>
+			<item value="E:\zzz\shiro-spring"/>
+			<item value="E:\zzz\shiro-spring\pom.xml"/>
+			<item value="E:\STSworlspace\springdatajpa"/>
+			<item value="E:\STSworlspace\parent"/>
+			<item value="E:\STSworlspace\javaconfig"/>
+			<item value="C:\Users\HJT\Desktop\springmvc\Springboot（一）资料与代码\_01springjavaconfig"/>
+			<item value="E:\STSworlspace\springMvcjavaConfig"/>
+			<item value="E:\STSworlspace\ssm"/>
+			<item value="E:\STSworlspace"/>
+			<item value="C:\Users\HJT\Desktop\mybatis\MyBatis-advance-query"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.zz.validate1"/>
+		</list>
+		<list key="groupId">
+			<item value="com.zz"/>
+		</list>
+		<list key="artifactId">
+			<item value="validate1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

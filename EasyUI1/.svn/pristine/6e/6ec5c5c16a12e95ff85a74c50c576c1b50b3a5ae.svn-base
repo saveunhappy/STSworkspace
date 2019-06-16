@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>员工管理</title>
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/default/easyui.css"><!-- 样式文件 -->   
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui/themes/icon.css"> <!--图标样式  -->  
+	<script type="text/javascript" src="../jquery-easyui/jquery.min.js"></script> <!-- jQuery核心库 -->
+	<script type="text/javascript" src="../jquery-easyui/jquery.easyui.min.js"></script>  <!-- EasyUI核心库 --> 
+	<script type="text/javascript" src="../jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="./employee.js"></script>
+</head>
+<body>
+		 
+	<table id="myDatagrid"></table>
+	<!-- 定义顶部按钮 -->
+	<div id="tt">
+		<a class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="add()">新增</a>
+		<a class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="edit()">编辑</a>
+		<a class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="del()">删除</a>
+		<a class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="refresh()">刷新</a>
+	</div>
+	<!-- 定义对话框 -->
+	<div id="myDialog">
+		<form id="myForm" action="save.action" method="post">
+			<table align="center" style="margin-top: 15px">
+				<input type="hidden" name="id">
+				<tr>
+					<td>姓名</td>
+					<td><input type="text" name="name"/></td>
+				</tr>
+				<tr>
+					<td>年龄</td>
+					<td><input type="text" name="age"/></td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td><input type="text" name="email"/></td>
+				</tr>
+				<tr>
+					<td>部门</td>
+					<td>
+						<select name="dept.id" style="width:145px" >
+							<option value="1">总经办</option>
+							<option value="2">市场部</option>
+							<option value="3">研发部</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 定义底部按钮 -->
+	<div id="bb">
+		<a class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="save()">保存</a>
+		<a class="easyui-linkbutton" iconCls="icon-cancel" plain="true" onclick="cancel()">取消</a>
+	</div>
+</body>
+</html>

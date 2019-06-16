@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.6.201809180658-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>java:com.example._01hello.Demo2Application</config>
+	</configs>
+	<autoconfigs>
+		<config>java:com.example.mybatis.AppConfig</config>
+		<config>java:com.example._06servlet.AppConfig</config>
+		<config>java:com.example._07file.AppConfig</config>
+		<config>java:com.example._08interceptor.AppConfig</config>
+		<config>java:com.example._05freemaker.AppConfig</config>
+		<config>java:com.example._03datasource.AppConfig</config>
+		<config>java:com.example._02configrationproperties.AppConfig</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

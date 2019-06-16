@@ -1,0 +1,15 @@
+package com.mypack;
+
+public class Test05 {
+	public static void main(String[] args) {
+
+	
+	
+	}
+}
+
+class Fruit{
+	
+	int a = 10;
+	
+}

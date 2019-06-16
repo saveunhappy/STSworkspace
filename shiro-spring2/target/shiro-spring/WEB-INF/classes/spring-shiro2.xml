@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+<!-- 自定义realm -->
+		<bean id="userRealm" class="cn.wolfcode.shiro.realm.UserRealm">
+			<property name="userDAO" ref="userRealm"></property>
+			<property name="roleDAO" ref="roleDAOImpl"></property>
+			<property name="permissionDAO" ref="permissionDAOImpl"></property>
+			<property name="credentialsMatcher" ref="credentialsMatcher"></property>
+		</bean>
+		
+		<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="userRealm"/>
+		<property name="cacheManager" ref="cacheManager"></property>
+		</bean>
+		
+		<!-- 定义shiroFilter -->
+		<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+			<property name="securityManager" ref="securityManager"/>
+			<property name="loginUrl" ref="/login"/>
+			<property name="unauthorizedUrl" value="/nopermission.jsp"/>
+			<property name="filterChainDefinitions">
+					<value>
+						/logout=logout
+						/**=authc
+					</value>
+			</property>
+		
+		</bean>
+		<!-- 开启AOP，对类代理 -->
+		<aop:config proxy-target-class="true"/>
+		<!-- 开启shiro注解支持 -->
+		<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+			<property name="securityManager" ref="securityManager"/>
+		</bean>
+		<!-- shiro权限异常处理 -->
+		<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+			<property name="exceptionMappings">
+			
+				<props>
+					<prop key="org.apache.shiro.authz.UnauthorizedException"/>
+				</props>
+			</property>
+		
+		</bean>
+		
+		
+		
+		<bean id="ecChacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+			<property name="shared" value="true"/>
+			<property name="configration" value="classpath:shiro-ehcache.xml"/>
+		</bean>
+		<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+			<property name="cacheManager" ref="ecChacheManager"></property>
+		</bean>
+		
+		<bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+			<property name="hashAlgorithmName" value="md5"/>
+			<property name="hashIterations" value="3"></property>			
+		</bean>
+		
+		
+		
+		
+		
+		
+		
+
+</beans>

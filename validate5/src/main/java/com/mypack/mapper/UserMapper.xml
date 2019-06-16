@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mypack.mapper.UserMapper">
+
+	<resultMap type="com.mypack.domain.User" id="BaseResultMap">
+	
+		<id column="id" property="id"/>
+		<result column="name" property="name"/>
+		<result column="className" property="className"/>
+		<result column="profession" property="profession"/>
+		<result column="department" property="department"/>
+		<result column="fujian" property="fujian"/>
+		<result column="rudang" property="rudang"/>
+		
+	</resultMap>
+	<sql id="sql">
+	id,name,className,profession,department,fujian,rudang
+	</sql>
+	<!-- SQL的抽取 -->
+	<sql id="sql1">
+	#{id},#{name},#{className},#{profession},#{department},#{fujian},#{rudang}
+	</sql>
+	<!-- 保存一条 -->
+	<insert id="save">
+	INSERT INTO user (<include refid="sql"/>) VALUES(<include refid="sql1"/>)
+	</insert>
+	<!-- 删除一条 -->
+	<delete id="delete">
+	DELETE FROM user where id = #{id}
+	</delete>
+	<!-- 更新一条 -->
+	<update id="update">
+	UPDATE user SET name = #{name},className = #{className},profession = #{profession},department = #{department}, fujian = #{fujian},rudang = #{rudang} where id = #{id}
+	</update>
+	<!-- 查询单个 -->
+	<select id="get" resultMap="BaseResultMap">
+		SELECT <include refid="sql"/> FROM user where id = #{id}
+	</select>
+	
+	
+	<!-- 查询所有 -->
+	<select id="listAll" resultMap="BaseResultMap">
+		SELECT * FROM user
+	</select>
+
+	
+
+	
+
+
+</mapper>

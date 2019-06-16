@@ -1,0 +1,5 @@
+静态资源： 
+1，默认情况下，Springboot会从classpath下的/static、/public、/resources、/META-INF/resources下加载静态资源；
+2，可以通过修改spring.resources.staticLocations来修改静态资源加载地址；
+spring.resources.static-locations=classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/mydir
+3，因为应用是打成jar包，所以之前的src/main/webapp不会加载；

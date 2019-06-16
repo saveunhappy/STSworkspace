@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 6 elements to &apos;validate/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;ssm2&apos;&#x0D;&#x0A;- Destination element: &apos;validate/src/main/resources&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     log4j.properties&#x0D;&#x0A;     mvc.xml&#x0D;&#x0A;     generatorConfig.xml&#x0D;&#x0A;     mybatis.xml&#x0D;&#x0A;     db.properties&#x0D;&#x0A;     applicationContext.xml" description="Copy files" destination="=validate/src\/main\/resources" element1="resources/log4j.properties" element2="resources/mvc.xml" element3="resources/generatorConfig.xml" element4="resources/mybatis.xml" element5="resources/db.properties" element6="resources/applicationContext.xml" files="6" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1556103088879" units="0" version="1.0"/>
+</session>
